@@ -101,12 +101,13 @@ client.on('message', (receivedMessage) => {
         }
 
     } else {
-        var emotiPattern = /\s:.*[)(/]\s/
+       var emotiPattern = /.*\s:.*[)(/]\s.*/
         var emotiFound = receivedMessage.content.toLowerCase().match(emotiPattern)
         if (emotiFound) {
           receivedMessage.channel.send(emotiFound)
         }
     }
+    
     // else if (receivedMessage.content.toLowerCase().includes(':)')) {
     //     receivedMessage.channel.send(":)")
     // }
@@ -145,8 +146,13 @@ function processCommand(receivedMessage) {
         receivedMessage.channel.send(`${expressionless}`)
     }
     if (primaryCommand == "cass") {
-      receivedMessage.channel.send("I am not interested in being polite or heterosexual");
-    }
+      var cassreact == Math.floor(Math.random() * 2)
+        if (cassreact == 0) {
+            receivedMessage.channel.send("Who the hell is Cass?")
+        }
+        if (cassreact == 1) {
+            receivedMessage.channel.send("I am not interested in being polite or heterosexual.")
+        }
 }
 
 function helpCommand(arguments, receivedMessage) {
