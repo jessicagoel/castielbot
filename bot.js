@@ -137,6 +137,9 @@ function processCommand(receivedMessage) {
     let primaryCommand = splitCommand[0].toLowerCase()
     let arguments = splitCommand.slice(1)
 
+    receivedMessage.channel.send("splitcomm is"+splitCommand)
+    receivedMessage.channel.send("args are"+arguments)
+   
     if (primaryCommand == "cas") {
         helpCommand(arguments, receivedMessage)
     }
