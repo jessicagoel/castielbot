@@ -146,7 +146,7 @@ function processCommand(receivedMessage) {
         receivedMessage.channel.send(`${expressionless}`)
     }
     if (primaryCommand == "cass") {
-      var cassreact == Math.floor(Math.random() * 2)
+      var cassreact = Math.floor(Math.random() * 2)
         if (cassreact == 0) {
             receivedMessage.channel.send("Who the hell is Cass?")
         }
