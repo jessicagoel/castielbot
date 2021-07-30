@@ -157,7 +157,9 @@ function helpCommand(arguments, receivedMessage) {
             receivedMessage.channel.send("Hello! Say `!cas help` for a list of commands")
     }
     else {
+      receivedMessage.channel.send(arguments)
       let argumentChop = arguments.split(" ")
+      
       arguments = argumentChop[0]
     }
     if (arguments == "check") {
