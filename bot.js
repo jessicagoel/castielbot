@@ -136,9 +136,6 @@ function processCommand(receivedMessage) {
     let splitCommand = fullCommand.split(" ")
     let primaryCommand = splitCommand[0].toLowerCase()
     let arguments = splitCommand.slice(1)
-
-    receivedMessage.channel.send("splitcomm is"+splitCommand)
-    receivedMessage.channel.send("args are"+arguments)
    
     if (primaryCommand == "cas") {
         helpCommand(arguments, receivedMessage)
@@ -160,10 +157,7 @@ function helpCommand(arguments, receivedMessage) {
             receivedMessage.channel.send("Hello! Say `!cas help` for a list of commands")
     }
     else {
-      receivedMessage.channel.send(arguments)
-      // let argumentChop = arguments.split(" ")
-      
-     // arguments = argumentChop[0]
+      arguments = arguments[0]
     }
     if (arguments == "check") {
         receivedMessage.channel.send("I am online!")
