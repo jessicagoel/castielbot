@@ -153,6 +153,7 @@ function processCommand(receivedMessage) {
         if (cassreact == 1) {
             receivedMessage.channel.send("I am not interested in being polite or heterosexual.")
         }
+    }
 }
 
 function helpCommand(arguments, receivedMessage) {
