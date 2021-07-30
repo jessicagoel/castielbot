@@ -158,9 +158,9 @@ function helpCommand(arguments, receivedMessage) {
     }
     else {
       receivedMessage.channel.send(arguments)
-      let argumentChop = arguments.split(" ")
+      // let argumentChop = arguments.split(" ")
       
-      arguments = argumentChop[0]
+     // arguments = argumentChop[0]
     }
     if (arguments == "check") {
         receivedMessage.channel.send("I am online!")
